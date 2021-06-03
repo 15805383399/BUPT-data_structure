@@ -1,7 +1,7 @@
 /*
  * @????: 
- * @¡ã???: 
- * @¡Á¡Â??: ??????
+ * @Â°???: 
+ * @Ã—Ã·??: ??????
  * @Date: 2021-04-08 19:01:08
  * @LastEditTime: 2021-05-12 13:36:42
  */
@@ -17,24 +17,24 @@ private:
     vector<vector<int>> board;
     vector<vector<int>> check;
     vector<vector<vector<int>>> result;
-    void solve(int x) //¶ÔÆåÅÌµÄµÚx+1ĞĞ½øĞĞ¼ÆËã
+    void solve(int x) //å¯¹æ£‹ç›˜çš„ç¬¬x+1è¡Œè¿›è¡Œè®¡ç®—
     {
         if (x == n)
         {
-            // Èç¹ûx==n ËµÃ÷n¸ö»ÊºóÒÑ¾­·ÅÖÃÍê±Ï£¬µÃµ½Ò»¸ö¿ÉÒÔÓÃµÄ·½°¸
+            // å¦‚æœx==n è¯´æ˜nä¸ªçš‡åå·²ç»æ”¾ç½®å®Œæ¯•ï¼Œå¾—åˆ°ä¸€ä¸ªå¯ä»¥ç”¨çš„æ–¹æ¡ˆ
             result.push_back(board);
             return;
         }
         for (int y = 0; y < n; y++)
         {
-            // Ê¹ÓÃ»ØËİµÄ·½·¨
+            // ä½¿ç”¨å›æº¯çš„æ–¹æ³•
             if (check[1][y] == 0 && check[2][x - y + n - 1] == 0 && check[3][x + y] == 0)
-            //ÅĞ¶ÏÊÇ·ñ¿ÉÒÔ·ÅÖÃ
+            //åˆ¤æ–­æ˜¯å¦å¯ä»¥æ”¾ç½®
             {
                 board[x][y] = check[1][y] = check[2][x - y + n - 1] = check[3][x + y] = 1;
-                solve(x + 1); // ·ÅÖÃºó¶ÔÏÂÒ»ĞĞ½øĞĞ¼ÆËã
+                solve(x + 1); // æ”¾ç½®åå¯¹ä¸‹ä¸€è¡Œè¿›è¡Œè®¡ç®—
                 board[x][y] = check[1][y] = check[2][x - y + n - 1] = check[3][x + y] = 0;
-                // »ØËİ
+                // å›æº¯
             }
         }
     }
@@ -50,7 +50,7 @@ public:
 
     vector<vector<vector<int>>> get_result()
     {
-        // ¼ÆËãn»ÊºóËùÓĞ½âµÄÍ¬Ê±Í³¼ÆÔËĞĞÊ±¼ä¡£
+        // è®¡ç®—nçš‡åæ‰€æœ‰è§£çš„åŒæ—¶ç»Ÿè®¡è¿è¡Œæ—¶é—´ã€‚
         clock_t start, finish;
         double duration;
         start = clock();
@@ -64,9 +64,9 @@ public:
 
 int main()
 {
-    int n = 10;
+    int n = 14;
     Solution a(n);
     vector<vector<vector<int>>> result = a.get_result();
-    cout << n << "»ÊºóÎÊÌâÒ»¹²ÓĞ" << result.size() << "¸ö½â" << endl;
+    cout << n << "çš‡åé—®é¢˜ä¸€å…±æœ‰" << result.size() << "ä¸ªè§£" << endl;
     return 0;
 }
