@@ -1,5 +1,5 @@
-#ifndef BUCKET_SORT_
-#define BUCKET_SORT_
+#ifndef _BUCKET_SORT_
+#define _BUCKET_SORT_
 #include "sort.h"
 
 /*
@@ -93,30 +93,30 @@ void Sort<T>::bucket_sort(vector<int> &data)
 
     double space = double(high - low + 1) / bucket_num;
     vector<list<int>> buckets(bucket_num, list<int>(1, INT_MIN));
-    clock_t start, finish;
-    double duration;
-    start = clock();
+//    clock_t start, finish;
+//    double duration;
+//    start = clock();
     for (int num : data)
     {
-        int k = (num - low) / space;
+        int k = int ((num - low) / space);
 
-        list<int>::iterator it = --buckets[k].end();
+        auto it = --buckets[k].end();
 
         while (*it > num)
             --it;
         buckets[k].insert(++it, num);
     }
 
-    finish = clock();
-    duration = (double)(finish - start) / CLOCKS_PER_SEC;
-    cout << "  放入桶用时为 " << duration << "s" << endl;
+//    finish = clock();
+//    duration = (double)(finish - start) / CLOCKS_PER_SEC;
+//    cout << "  放入桶用时为 " << duration << "s" << endl;
 
     int count = 0;
     for (int i = 0; i < bucket_num; ++i)
     {
-        if (buckets[i].size() == 0)
+        if (buckets[i].empty())
             continue;
-        for (list<int>::iterator it = ++buckets[i].begin(); it != buckets[i].end(); ++it)
+        for (auto it = ++buckets[i].begin(); it != buckets[i].end(); ++it)
             data[count++] = *it;
     }
 }

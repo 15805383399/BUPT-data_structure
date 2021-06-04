@@ -1,0 +1,3 @@
+/home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/cmake-build-debug/CMakeFiles/test.dir

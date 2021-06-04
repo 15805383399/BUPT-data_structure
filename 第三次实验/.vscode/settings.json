@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "iostream": "c"
+        "iostream": "c",
+        "*.tcc": "c",
+        "deque": "c",
+        "vector": "c"
     }
 }

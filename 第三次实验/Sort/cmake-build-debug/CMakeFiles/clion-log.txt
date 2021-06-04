@@ -1,0 +1,4 @@
+/home/lyk/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/cmake-build-debug
