@@ -21,6 +21,8 @@ sort.h
 /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/main.cpp
 sort.h
 /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/sort.h
+random
+-
 
 /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/merge_sort.h
 sort.h
@@ -47,7 +49,7 @@ ctime
 -
 cmath
 -
-limits.h
+climits
 -
 queue
 -
