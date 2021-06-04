@@ -23,6 +23,7 @@ private:
     static void _merge_sort(vector<T> &data, vector<T> &temp, int left, int right);
     static void _merge(vector<T> &data, vector<T> &temp, int left, int right, int mid);
     static int max_length(vector<int> &data); // 返回整形数组中最大数据的位数
+    static void heap_adjust(vector<T> &data, int start, int end);
 
 public:
     void timing(vector<T> &data, void (*func)(vector<T> &d), bool show_result);

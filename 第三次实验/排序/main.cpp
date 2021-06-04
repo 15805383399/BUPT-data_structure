@@ -52,5 +52,8 @@ int main()
     cout << "桶排序：" << endl;
     s.timing(data0, s.bucket_sort, false);
 
+    cout << "堆排序：" << endl;
+    s.timing(data0, s.heap_sort, false);
+
     return 0;
 }

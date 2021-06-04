@@ -86,7 +86,7 @@ void Sort<T>::bucket_sort(vector<int> &data)
         high = max(high, num);
     }
 
-    int bucket_num = data.size() / 100;
+    int bucket_num = data.size() / 50;
     bucket_num = max(100, bucket_num);
     double space = double(high - low + 1) / bucket_num;
     vector<list<int>> buckets(bucket_num, list<int>(1, INT_MIN));
