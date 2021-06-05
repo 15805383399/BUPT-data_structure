@@ -4,6 +4,7 @@
 
 #include "sort.h"
 #include <random>
+#include "dispatch.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main() {
     }
 
     Sort<int> s;
-    cout << "基础实验" << endl;
+    cout << "基础实验：" << endl;
     cout << "冒泡排序【原始版】：" << endl;
     s.timing_complex(Sort<int>::bubble_sort, data_random, data_a, data_de, false,
                      false);
@@ -74,8 +75,15 @@ int main() {
     s.timing_complex(Sort<int>::bucket_sort, data_random, data_a, data_de, false,
                      false);
 
-    cout << "应用试验" << endl;
+    cout << "拓展试验——机器调度问题：" << endl;
 
-
+    vector<double> tasks0 = {2, 14, 4, 16, 6, 5, 3};
+    vector<double> tasks1(n);
+    uniform_real_distribution<double> u_d(0, 100);
+    for (int i = 0; i < n; ++i) {
+        tasks1[i] = u_d(e);
+    }
+    dispatch(tasks0, 3);
+    dispatch(tasks1, 10);
     return 0;
 }

@@ -3,6 +3,7 @@
 
 CMakeFiles/test.dir/main.cpp.o: ../bubble_sort.h
 CMakeFiles/test.dir/main.cpp.o: ../bucket_sort.h
+CMakeFiles/test.dir/main.cpp.o: ../dispatch.h
 CMakeFiles/test.dir/main.cpp.o: ../heap_sort.h
 CMakeFiles/test.dir/main.cpp.o: ../main.cpp
 CMakeFiles/test.dir/main.cpp.o: ../merge_sort.h

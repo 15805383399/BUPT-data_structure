@@ -14,6 +14,20 @@ sort.h
 sort.h
 /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/sort.h
 
+/home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/dispatch.h
+algorithm
+-
+vector
+-
+utility
+-
+queue
+-
+cmath
+-
+functional
+-
+
 /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/heap_sort.h
 sort.h
 /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/sort.h
@@ -23,6 +37,8 @@ sort.h
 /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/sort.h
 random
 -
+dispatch.h
+/home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/dispatch.h
 
 /home/lyk/文档/data_structure/BUPT-data_structure/第三次实验/Sort/merge_sort.h
 sort.h
