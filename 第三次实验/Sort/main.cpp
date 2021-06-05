@@ -1,6 +1,7 @@
 //
 // Created by lyk on 2021/6/3.
 //
+#pragma GCC optimize(3, "Ofast", "inline")
 
 #include "sort.h"
 #include <random>
@@ -9,7 +10,7 @@
 using namespace std;
 
 int main() {
-    int n = 1e4;
+    int n = 3e4;
     int m = 100;
     vector<int> data_random(n); // 普通随机数据，取值范围是[0, n/2)
     vector<int> data_dense(n); // 测试计数排序使用，含有大量随机重复数据的
@@ -83,7 +84,9 @@ int main() {
     for (int i = 0; i < n; ++i) {
         tasks1[i] = u_d(e);
     }
+    cout << "默认测试数据：" << endl;
     dispatch(tasks0, 3);
+    cout << "随机测试数据：" << endl;
     dispatch(tasks1, 10);
     return 0;
 }

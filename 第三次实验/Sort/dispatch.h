@@ -25,11 +25,11 @@ struct cmp {
 
 void dispatch(vector<double> &tasks, int machine_num) {
     // 输出原始任务列表
-    cout << "任务：" << endl;
-    for (auto task : tasks)
-        cout << task << " ";
-    cout << endl;
-    sort(tasks.begin(), tasks.end(), greater<int>());
+//    cout << "任务：" << endl;
+//    for (auto task : tasks)
+//        cout << task << " ";
+//    cout << endl;
+    sort(tasks.begin(), tasks.end(), greater<>());
     vector<vector<double>> dispatch_list(machine_num);
     vector<double> times_list(machine_num, 0); // 用于储存每个机器的任务总时长
 
@@ -40,7 +40,8 @@ void dispatch(vector<double> &tasks, int machine_num) {
     int this_machine = 0; // 当前机器编号
     double longest = 0;
     for (double task : tasks) {
-        if (times_list[this_machine] + task > longest) {
+        if (times_list[this_machine] + task > longest &&
+            q.top().second < times_list[this_machine]) {
             q.push(P(this_machine, times_list[this_machine]));
             this_machine = q.top().first; // 取出当前时长最短的机器
             q.pop();
@@ -49,13 +50,14 @@ void dispatch(vector<double> &tasks, int machine_num) {
         dispatch_list[this_machine].emplace_back(task);
         longest = max(longest, times_list[this_machine]); //更改最长时间
     }
+    cout.precision(10);
     for (int i = 0; i < machine_num; ++i) {
         cout << "编号" << i << "机器总时长：" << times_list[i] << endl;
-        cout << "  所有任务各自时长：";
-        for (double task : dispatch_list[i]) {
-            cout << task << " ";
-        }
-        cout << endl;
+//        cout << "  所有任务各自时长：";
+//        for (double task : dispatch_list[i]) {
+//            cout << task << " ";
+//        }
+//        cout << endl;
     }
 }
 
